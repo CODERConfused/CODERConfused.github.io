@@ -1,21 +1,6 @@
-body {
-    background-color: black;
-    color: red;
-    font-family: Arial, sans-serif;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-h1 {
-    color: red;
-}
-
 .logo {
-    max-width: 150px;
+    max-width: 90px;
     height: auto;
+    left: 100px;
+    top: 100px;
 }
