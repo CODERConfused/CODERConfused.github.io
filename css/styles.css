@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    color: red;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: red;
+}
+
+header,
+footer {
+    background-color: red;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
