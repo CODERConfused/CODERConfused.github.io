@@ -4,14 +4,18 @@ body {
     font-family: Arial, sans-serif;
 }
 
-a {
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+h1 {
     color: red;
 }
 
-header,
-footer {
-    background-color: red;
-    color: black;
-    padding: 10px;
-    text-align: center;
+.logo {
+    max-width: 150px;
+    height: auto;
 }
