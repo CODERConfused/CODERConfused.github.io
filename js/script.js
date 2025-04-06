@@ -1,5 +1,5 @@
 const createRain = () => {
-    const body = document.body;
+    const rainContainer = document.querySelector('.rain-animation'); // Select the rain container
     const numberOfDrops = 100;
 
     for (let i = 0; i < numberOfDrops; i++) {
@@ -9,7 +9,7 @@ const createRain = () => {
         drop.style.animationDuration = Math.random() * 2 + 2 + 's';
         drop.style.animationDelay = Math.random() * 2 + 's';
         drop.style.transform = 'translateY(-100vh)'; // Start off-screen
-        body.appendChild(drop);
+        rainContainer.appendChild(drop); // Append to the rain container
     }
 };
 
