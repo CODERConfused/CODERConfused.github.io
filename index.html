@@ -2,72 +2,74 @@
 <html lang="en">
 
 <head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            overflow: hidden;
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .navbar {
+        background-color: #1D3985;
+        color: white;
+        padding: 20px 30px;
+        /* Increased padding for a bigger navbar */
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+
+    .navbar-buttons {
+        display: flex;
+        gap: 10px;
+        /* Adds spacing between buttons */
+        justify-content: center;
+        /* Centers the buttons horizontally */
+        flex: 1;
+        /* Ensures the buttons take up available space */
+    }
+
+    .navbar button {
+        background-color: #1D3985;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        /* Increased padding for bigger buttons */
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        /* Increased font size for better readability */
+    }
+
+    .navbar button:hover {
+        background-color: lightblue;
+    }
+
+    .raindrop {
+        position: absolute;
+        width: 2px;
+        height: 10px;
+        background-color: lightblue;
+        animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+        0% {
+            transform: translateY(-100%);
         }
 
-        .navbar {
-            background-color: #1D3985;
-            color: white;
-            padding: 25px 30px;
-            display: flex;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            /* Ensure the navbar starts at the left edge */
-            right: 0;
-            /* Ensure the navbar spans the full width */
-            width: 100%;
-            z-index: 1000;
-            box-sizing: border-box;
-            /* Include padding in width calculation */
+        100% {
+            transform: translateY(100vh);
         }
-
-        .navbar-buttons {
-            display: flex;
-            gap: 5px;
-            /* Adds 5px spacing between buttons */
-            margin-left: auto;
-            /* Pushes the buttons to the right */
-        }
-
-        .navbar button {
-            background-color: #1D3985;
-            color: white;
-            border: none;
-            padding: 15px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 19px;
-        }
-
-        .navbar button:hover {
-            background-color: lightblue;
-        }
-
-        .raindrop {
-            position: absolute;
-            width: 2px;
-            height: 10px;
-            background-color: lightblue;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-100%);
-            }
-
-            100% {
-                transform: translateY(100vh);
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body>
