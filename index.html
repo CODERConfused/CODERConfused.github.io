@@ -2,79 +2,80 @@
 <html lang="en">
 
 <head>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: white;
-        overflow: hidden;
-    }
-
-    .navbar {
-        background-color: #1D3985;
-        color: white;
-        padding: 20px 30px;
-        /* Increased padding for a bigger navbar */
-        display: flex;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        z-index: 1000;
-        box-sizing: border-box;
-    }
-
-    .navbar-buttons {
-        display: flex;
-        gap: 10px;
-        /* Adds spacing between buttons */
-        justify-content: flex-end;
-        /* Aligns buttons to the right */
-        margin-right: 90px;
-        /* Ensures the leftmost button is 50px away from the center */
-        flex: 1;
-    }
-
-    .navbar button {
-        background-color: #1D3985;
-        color: white;
-        border: none;
-        padding: 15px 20px;
-        /* Increased padding for bigger buttons */
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 18px;
-        /* Increased font size for better readability */
-    }
-
-    .navbar button:hover {
-        background-color: lightblue;
-    }
-
-    .raindrop {
-        position: absolute;
-        width: 2px;
-        height: 10px;
-        background-color: lightblue;
-        animation: fall linear infinite;
-    }
-
-    @keyframes fall {
-        0% {
-            transform: translateY(-100%);
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            overflow: hidden;
         }
 
-        100% {
-            transform: translateY(100vh);
+        .navbar {
+            background-color: #1D3985;
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
         }
-    }
-</style>
+
+        .navbar-logo {
+            height: 50px;
+            /* Adjust the height of the logo */
+            margin-right: 20px;
+            /* Add spacing between the logo and buttons */
+        }
+
+        .navbar-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            flex: 1;
+        }
+
+        .navbar button {
+            background-color: #1D3985;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .navbar button:hover {
+            background-color: lightblue;
+        }
+
+        .raindrop {
+            position: absolute;
+            width: 2px;
+            height: 10px;
+            background-color: lightblue;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="navbar">
+        <img src="logo.png" alt="Logo" class="navbar-logo">
         <div class="navbar-buttons">
             <button>Home</button>
             <button>About Us</button>
