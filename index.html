@@ -10,6 +10,34 @@
             overflow: hidden;
         }
 
+        .navbar {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar button {
+            background-color: white;
+            color: blue;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .navbar button:hover {
+            background-color: lightblue;
+        }
+
         .raindrop {
             position: absolute;
             width: 2px;
@@ -31,6 +59,11 @@
 </head>
 
 <body>
+    <div class="navbar">
+        <button>Home</button>
+        <button>About Us</button>
+        <button>Contact Us</button>
+    </div>
     <script src="js/script.js"></script>
 </body>
 
