@@ -15,7 +15,6 @@
             color: white;
             padding: 10px 20px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             position: fixed;
             top: 0;
@@ -23,12 +22,17 @@
             z-index: 1000;
         }
 
+        .navbar-buttons {
+            display: flex;
+            gap: 5px;
+            /* Adds 5px spacing between buttons */
+        }
+
         .navbar button {
             background-color: #1D3985;
             color: white;
             border: none;
             padding: 10px 15px;
-            margin: 0 5px;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
@@ -60,9 +64,11 @@
 
 <body>
     <div class="navbar">
-        <button>Home</button>
-        <button>About Us</button>
-        <button>Contact Us</button>
+        <div class="navbar-buttons">
+            <button>Home</button>
+            <button>About Us</button>
+            <button>Contact Us</button>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
