@@ -28,3 +28,20 @@ window.addEventListener('scroll', () => {
     }
     lastScrollY = window.scrollY;
 });
+
+const testimonials = document.querySelectorAll('.testimonial');
+let currentIndex = 0;
+
+function showTestimonial(index) {
+    testimonials.forEach((testimonial, i) => {
+        testimonial.style.display = i === index ? 'block' : 'none';
+    });
+}
+
+function startSlideshow() {
+    showTestimonial(currentIndex);
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    setTimeout(startSlideshow, 5000); // Change testimonial every 5 seconds
+}
+
+startSlideshow();
