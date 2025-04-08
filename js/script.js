@@ -30,11 +30,13 @@ window.addEventListener('scroll', () => {
 });
 
 const testimonials = document.querySelectorAll('.testimonial');
+const dots = document.querySelectorAll('.dot');
 let currentIndex = 0;
 
 function showTestimonial(index) {
     testimonials.forEach((testimonial, i) => {
         testimonial.style.display = i === index ? 'block' : 'none';
+        dots[i].style.backgroundColor = i === index ? '#1D3985' : '#ccc'; // Highlight active dot
     });
 }
 
