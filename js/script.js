@@ -14,3 +14,17 @@ const createRain = () => {
 };
 
 createRain();
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > lastScrollY) {
+        // Scrolling down
+        navbar.classList.add('small');
+    } else {
+        // Scrolling up
+        navbar.classList.remove('small');
+    }
+    lastScrollY = window.scrollY;
+});
