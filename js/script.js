@@ -34,7 +34,14 @@ let currentIndex = 0;
 
 function showTestimonial(index) {
     testimonials.forEach((testimonial, i) => {
-        testimonial.style.display = i === index ? 'block' : 'none';
+        testimonial.classList.remove('active', 'exit');
+        if (i === index) {
+            testimonial.style.display = 'block';
+            setTimeout(() => testimonial.classList.add('active'), 10); // Add active class for animation
+        } else if (testimonial.style.display === 'block') {
+            testimonial.classList.add('exit'); // Add exit class for sliding out
+            setTimeout(() => (testimonial.style.display = 'none'), 500); // Hide after animation
+        }
     });
 }
 
