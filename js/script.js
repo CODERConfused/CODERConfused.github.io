@@ -36,7 +36,7 @@ let currentIndex = 0;
 function showTestimonial(index) {
     testimonials.forEach((testimonial, i) => {
         testimonial.style.display = i === index ? 'block' : 'none';
-        dots[i].style.backgroundColor = i === index ? '#1D3985' : '#ccc'; // Highlight active dot
+        dots[i].style.backgroundColor = i === index ? '#D22E1F' : '#ccc'; // Highlight active dot
     });
 }
 
