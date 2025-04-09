@@ -47,3 +47,32 @@ function startSlideshow() {
 }
 
 startSlideshow();
+
+document.addEventListener('DOMContentLoaded', () => {
+    emailjs.init('YOUR_USER_ID'); // Replace 'YOUR_USER_ID' with your EmailJS user ID
+
+    const form = document.getElementById('contact-form');
+    const sendButton = document.getElementById('send-button');
+
+    sendButton.addEventListener('click', () => {
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const message = document.getElementById('message').value;
+
+        const templateParams = {
+            first_name: firstName,
+            last_name: lastName,
+            message: message,
+        };
+
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            .then(() => {
+                alert('Message sent successfully!');
+                form.reset();
+            })
+            .catch((error) => {
+                console.error('Error sending message:', error);
+                alert('Failed to send message. Please try again later.');
+            });
+    });
+});
